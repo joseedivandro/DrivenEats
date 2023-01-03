@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,400&display=swap');
+
+header{
+    background-color: #CF2B2B;
+    height: 92px;
+
+}
+
+
+header h1{
+    font-size: 44px;
+    font-family: righteous;
+    color: white;
+}
+
+header h3{
+    font-size: 18px;
+    font-family: roboto;
+    color: white;
+}
