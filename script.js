@@ -2,16 +2,14 @@
 
 
 function desmarcarBotaoAnterior(seletor) {
-
     const botaoSelecionadoAnteriormente = document.querySelector(`${seletor} .selecionado`);
-
-
     if (botaoSelecionadoAnteriormente !== null) {
-        
+        // remover a classe selecionado desse botao
         botaoSelecionadoAnteriormente.classList.remove('selecionado');
         botaoSelecionadoAnteriormente.querySelector("ion-icon").classList.add("none");
     }
 }
+
 
 
 let pratoPrincipal = "";
@@ -22,10 +20,9 @@ function escolhePrato(botaoNoThis) {
     botaoNoThis.classList.add("selecionado");
     pratoPrincipal = botaoNoThis.querySelector('h2').innerHTML;
     precoPratoPrincipal = Number(botaoNoThis.querySelector('h6').innerHTML.replace('R$', '').replace(',', '.'));
+
     verificaQtdePratosSelecionados();
     botaoNoThis.querySelector("ion-icon").classList.remove("none");
-    console.log(botaoNoThis);
-    
 
 };
 
@@ -34,12 +31,11 @@ let precoBebida ="";
 
 function escolheBebida(botaoNoThis) {
     desmarcarBotaoAnterior('.bebidaSelecionada');
-    botaoNoThis.classList.add("selecionadoUm");
+    botaoNoThis.classList.add("selecionado");
     bebida = botaoNoThis.querySelector('h2').innerHTML;
     precoBebida  = Number(botaoNoThis.querySelector('h6').innerHTML.replace('R$', '').replace(',', '.'));
     verificaQtdePratosSelecionados();
     botaoNoThis.querySelector("ion-icon").classList.remove("none");
-    console.log(botaoNoThis);
 
 };
 
@@ -49,12 +45,11 @@ let precoSobremesa ="";
 
 function escolheSobremesa(botaoNoThis) {
     desmarcarBotaoAnterior('.sobremesaSelecionada');
-    botaoNoThis.classList.add("selecionadoDois");
+    botaoNoThis.classList.add("selecionado");
     sobremesa = botaoNoThis.querySelector('h2').innerHTML;
     precoSobremesa = Number(botaoNoThis.querySelector('h6').innerHTML.replace('R$', '').replace(',', '.'));
     verificaQtdePratosSelecionados();
     botaoNoThis.querySelector("ion-icon").classList.remove("none");
-    console.log(botaoNoThis);
     
 };
 
