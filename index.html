@@ -21,8 +21,8 @@
         <div class="container">
             <h1>Primeiro, seu prato</h1>
             <div   class="pratos pratoPrincipal">
-                <div  data-test="dish" class="centralizaPrato " onclick="escolhePrato(this)">
-                    <div  class="prato"  >
+                <div   class="centralizaPrato " onclick="escolhePrato(this)">
+                    <div   data-test="dish"class="prato"  >
                         <img src="./imagens/pf.jpg" alt="pf">
                         <h2 data-test="item-name">Prato feito</h2>
                         <h5>Arroz, feijão, carne assada e saladinha</h5>
@@ -32,8 +32,8 @@
                     </div>
                 </div>
 
-                <div  data-test="dish" class="centralizaPrato" onclick="escolhePrato(this)">
-                    <div class="prato">
+                <div  class="centralizaPrato" onclick="escolhePrato(this)">
+                    <div  data-test="dish" class="prato">
                         <img src="./imagens/strogonoff.jpg" alt="strogonoff">
                         <h2 data-test="item-name">Strogonoff</h2>
                         <h5>Arroz, batata palha e creme de frango</h5>
@@ -41,8 +41,8 @@
                         <ion-icon class="none" name="checkmark-circle"></ion-icon> 
                     </div>
                 </div>
-                <div data-test="dish" class="centralizaPrato" onclick="escolhePrato(this)">
-                    <div class="prato">
+                <div  class="centralizaPrato" onclick="escolhePrato(this)">
+                    <div  data-test="dish" class="prato">
                         <img src="./imagens/feijoada.jpg" alt="pf">
                         <h2 data-test="item-name">Feijoada</h2>
                         <h5>Arroz, feijão, farofa e carnes variadas</h5>
@@ -53,8 +53,8 @@
             </div>
             <h1>Agora, sua bebida</h1>
             <div class="bebidas bebida">
-                <div data-test="drink" class="centralizaPrato" onclick="escolheBebida(this)"  >
-                    <div class="prato ">
+                <div  class="centralizaPrato" onclick="escolheBebida(this)"  >
+                    <div data-test="drink" class="prato modify">
                         <img src="./imagens/coca-cola.png" alt="cola">
                         <h2 data-test="item-name">Coca geladinha</h2>
                         <h5>Lata 350ml</h5>
@@ -62,8 +62,8 @@
                         <ion-icon class="none" name="checkmark-circle"></ion-icon>
                     </div>
                 </div>
-                <div  data-test="drink" class="centralizaPrato" onclick="escolheBebida(this)">
-                    <div class="prato ">
+                <div  class="centralizaPrato" onclick="escolheBebida(this)">
+                    <div data-test="drink" class="prato modify">
                         <img src="./imagens/fanta.jpeg" alt="fanta">
                         <h2 data-test="item-name">Fanta uva</h2>
                         <h5>Lata 350ml</h5>
@@ -71,8 +71,8 @@
                         <ion-icon class="none" name="checkmark-circle"></ion-icon>
                     </div>
                 </div>
-                <div  data-test="drink"  class="centralizaPrato" onclick="escolheBebida(this)">
-                    <div class="prato ">
+                <div   class="centralizaPrato" onclick="escolheBebida(this)">
+                    <div data-test="drink" class="prato modify">
                         <img src="./imagens/gjesus.jpg" alt="guarana">
                         <h2 data-test="item-name">Guaraná Jesus</h2>
                         <h5>Lata 350ml</h5>
@@ -83,8 +83,8 @@
             </div>
             <h1>Por fim, sua sobremesa</h1>
             <div class="sobremesas sobremesa">
-                <div  data-test="dessert" class="centralizaPrato" onclick="escolheSobremesa(this)">
-                    <div class="prato">
+                <div   class="centralizaPrato" onclick="escolheSobremesa(this)">
+                    <div  data-test="dessert"class="prato modify">
                         <img src="./imagens/cocada.jpg" alt="cocada">
                         <h2 data-test="item-name">cocada</h2>
                         <h5>apenas cocada</h5>
@@ -92,8 +92,8 @@
                         <ion-icon class="none" name="checkmark-circle"></ion-icon>
                     </div>
                 </div>
-                <div data-test="dessert" class="centralizaPrato" onclick="escolheSobremesa(this)">
-                    <div class="prato">
+                <div  class="centralizaPrato" onclick="escolheSobremesa(this)">
+                    <div data-test="dessert" class="prato modify">
                         <img src="./imagens/pudim.png" alt="pudim">
                         <h2 data-test="item-name">Pudim</h2>
                         <h5>Apenas pudim</h5>
@@ -101,8 +101,8 @@
                         <ion-icon class="none" name="checkmark-circle"></ion-icon>
                     </div>
                 </div>
-                <div data-test="dessert" class="centralizaPrato" onclick="escolheSobremesa(this)">
-                    <div  data-test="order-btn" class="prato ">
+                <div class="centralizaPrato" onclick="escolheSobremesa(this)">
+                    <div   data-test="dessert"  class="prato modify">
                         <img src="./imagens/mousse.jpg" alt="mousse">
                         <h2 data-test="item-name">Mousse</h2>
                         <h5>apenas mousse</h5>
@@ -114,7 +114,7 @@
         </div>
 
         <footer>
-            <a target="_blank"><button disabled onclick="irWhatsapp()" class="chamaPedido">
+            <a  data-test="order-btn" target="_blank"><button  disabled onclick="irWhatsapp()" class="chamaPedido">
                 <h3 >Selecione os 3 itens
                     para fechar o pedido</h3>
             </button></a>
