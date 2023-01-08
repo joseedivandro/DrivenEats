@@ -14,7 +14,7 @@ header {
 
 main {
     width: 414px;
-    height: 1070px;
+    
 
 
 
@@ -25,6 +25,7 @@ body {
     justify-content: center;
     display: flex;
     flex-direction: column;
+    background-color: #E5E5E5;
 
 
 
@@ -49,10 +50,10 @@ header h3 {
 
 
 .container {
-    
+
     width: 414px;
     margin: auto;
-    overflow: hidden;
+   
     position: relative;
     top: 100px;
 
@@ -73,33 +74,55 @@ header h3 {
     display: flex;
     overflow-x: scroll;
     align-items: center;
-    width: 8000px;
-
-
-
-
+    width: 414px;
+    min-width: 414px;
 }
+.bebidas {
+    background-color: #E5E5E5;
+    display: flex;
+    overflow-x: scroll;
+    align-items: center;
+    width: 414px;
+    min-width: 414px;
+}
+.sobremesas {
+    background-color: #E5E5E5;
+    display: flex;
+    overflow-x: scroll;
+    align-items: center;
+    width: 414px;
+    min-width: 414px;
+    margin-bottom: 200px;
+}
+
+
+
 
 .centralizaPrato {
     width: 172px;
     background-color: white;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     margin-left: 16px;
     border-radius: 9px;
+    box-sizing: border-box;
+    min-width: 172px;
+    box-sizing: border-box;
+    border: 5px solid white;
 
+}
+
+.selecionado{
+    border: 5px solid green;
 }
 
 .prato {
     background-color: white;
-    
     width: 144px;
     border-radius: 9px;
-
     display: flex;
     flex-direction: column;
-    margin-left: 16px;
+    margin: auto;
+    
+   
 }
 
 .prato img {
@@ -145,8 +168,24 @@ header h3 {
     margin-bottom: 16px;
 }
 
-.modify h6{
+.modify h6 {
     margin-top: 8px;
+}
+
+
+.pedido{
+    text-align: center;
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 23px;
+text-align: center;
+color: white;
+font-weight: bold;
+background-color: green;
+    
+    
 }
 
 
@@ -204,6 +243,3 @@ text-align: center;
 letter-spacing: 0.018em;
 }
 
-body {
-    background-color: #E5E5E5;
-}

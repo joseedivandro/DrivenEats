@@ -20,9 +20,9 @@
         </header>
         <div class="container">
             <h1>Primeiro, seu prato</h1>
-            <div class="pratos">
-                <div class="centralizaPrato">
-                    <div class="prato">
+            <div  class="pratos pratoPrincipal">
+                <div class="centralizaPrato " onclick="escolhePrato(this)">
+                    <div  class="prato"  >
                         <img src="./imagens/pf.jpg" alt="pf">
                         <h2>Prato feito</h2>
                         <h5>Arroz, feijão, carne assada e saladinha</h5>
@@ -30,7 +30,7 @@
                     </div>
                 </div>
 
-                <div class="centralizaPrato">
+                <div class="centralizaPrato" onclick="escolhePrato(this)">
                     <div class="prato">
                         <img src="./imagens/strogonoff.jpg" alt="strogonoff">
                         <h2>Strogonoff</h2>
@@ -38,7 +38,7 @@
                         <h6> R$ 18,99 </h6>
                     </div>
                 </div>
-                <div class="centralizaPrato">
+                <div class="centralizaPrato" onclick="escolhePrato(this)">
                     <div class="prato">
                         <img src="./imagens/feijoada.jpg" alt="pf">
                         <h2>Feijoada</h2>
@@ -48,8 +48,8 @@
                 </div>
             </div>
             <h1>Agora, sua bebida</h1>
-            <div class="pratos">
-                <div class="centralizaPrato">
+            <div class="bebidas bebida">
+                <div class="centralizaPrato" onclick="escolheBebida(this)"  >
                     <div class="prato modify">
                         <img src="./imagens/coca-cola.png" alt="cola">
                         <h2>Coca geladinha</h2>
@@ -57,7 +57,7 @@
                         <h6> R$ 4,99 </h6>
                     </div>
                 </div>
-                <div class="centralizaPrato">
+                <div class="centralizaPrato" onclick="escolheBebida(this)">
                     <div class="prato modify">
                         <img src="./imagens/fanta.jpeg" alt="fanta">
                         <h2>Fanta uva</h2>
@@ -65,7 +65,7 @@
                         <h6> R$ 4,99 </h6>
                     </div>
                 </div>
-                <div class="centralizaPrato">
+                <div class="centralizaPrato" onclick="escolheBebida(this)">
                     <div class="prato modify">
                         <img src="./imagens/gjesus.jpg" alt="guarana">
                         <h2>Guaraná Jesus</h2>
@@ -75,8 +75,8 @@
                 </div>
             </div>
             <h1>Por fim, sua sobremesa</h1>
-            <div class="pratos">
-                <div class="centralizaPrato">
+            <div class="sobremesas sobremesa">
+                <div class="centralizaPrato" onclick="escolheSobremesa(this)">
                     <div class="prato modify">
                         <img src="./imagens/cocada.jpg" alt="cocada">
                         <h2>cocada</h2>
@@ -84,7 +84,7 @@
                         <h6> R$ 4,99 </h6>
                     </div>
                 </div>
-                <div class="centralizaPrato">
+                <div class="centralizaPrato" onclick="escolheSobremesa(this)">
                     <div class="prato modify">
                         <img src="./imagens/pudim.png" alt="pudim">
                         <h2>Pudim</h2>
@@ -92,7 +92,7 @@
                         <h6> R$ 7,99 </h6>
                     </div>
                 </div>
-                <div class="centralizaPrato">
+                <div class="centralizaPrato" onclick="escolheSobremesa(this)">
                     <div class="prato modify">
                         <img src="./imagens/mousse.jpg" alt="mousse">
                         <h2>Mousse de maracujá</h2>
@@ -104,12 +104,13 @@
         </div>
 
         <footer>
-            <button>
-                <h3> Selecione os 3 itens
+            <button class="chamaPedido">
+                <h3 >Selecione os 3 itens
                     para fechar o pedido</h3>
             </button>
         </footer>
     </main>
+    <script src="script.js"></script>
 </body>
 
 </html>
