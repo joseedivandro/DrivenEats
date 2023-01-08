@@ -114,10 +114,11 @@ header h3 {
 .selecionado{
     border: 5px solid #32B72F;
     
+    
 }
 
 .prato {
-    background-color: white;
+    
     width: 144px;
     border-radius: 9px;
     display: flex;
@@ -185,7 +186,7 @@ line-height: 23px;
 text-align: center;
 color: white;
 font-weight: bold;
-background-color: green;
+background-color: #32B72F;
     
     
 }

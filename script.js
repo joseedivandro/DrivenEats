@@ -17,12 +17,8 @@ let pratoPrincipal;
 
 function escolhePrato(botaoNoThis){
     desmarcarBotaoAnterior('.pratoPrincipal');
-
    botaoNoThis.classList.add("selecionado");
-  
-
    pratoPrincipal = botaoNoThis.innerHTML;
-
    verificaQtdePratosSelecionados();
    botaoNoThis.querySelector("ion-icon").classList.remove("none");
 };
@@ -33,7 +29,6 @@ function escolheBebida(botaoNoThis){
     desmarcarBotaoAnterior('.bebida');
     botaoNoThis.classList.add("selecionado");
     bebida=botaoNoThis.innerHTML;
-
     verificaQtdePratosSelecionados();
     botaoNoThis.querySelector("ion-icon").classList.remove("none");
 
@@ -49,6 +44,8 @@ function escolheSobremesa(botaoNoThis){
     verificaQtdePratosSelecionados();
     botaoNoThis.querySelector("ion-icon").classList.remove("none");
 };
+
+
 function verificaQtdePratosSelecionados(){
     if(pratoPrincipal !== undefined && bebida !== undefined &&  sobremesa !== undefined){
         const mudar = document.querySelector('.chamaPedido');
