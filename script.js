@@ -1,11 +1,12 @@
 
 
-function desmarcarBotaoAnterior(seletor){
-   
+
+function desmarcarBotaoAnterior(seletor) {
+
     const botaoSelecionadoAnteriormente = document.querySelector(`${seletor} .selecionado`);
 
-   
-    if (botaoSelecionadoAnteriormente !== null){
+
+    if (botaoSelecionadoAnteriormente !== null) {
         // remover a classe selecionado desse botao
         botaoSelecionadoAnteriormente.classList.remove('selecionado');
         botaoSelecionadoAnteriormente.querySelector("ion-icon").classList.add("none");
@@ -13,46 +14,79 @@ function desmarcarBotaoAnterior(seletor){
 }
 
 
-let pratoPrincipal;
+let pratoPrincipal = "";
+let precoPratoPrincipal = "";
 
-function escolhePrato(botaoNoThis){
+function escolhePrato(botaoNoThis) {
     desmarcarBotaoAnterior('.pratoPrincipal');
-   botaoNoThis.classList.add("selecionado");
-   pratoPrincipal = botaoNoThis.innerHTML;
-   verificaQtdePratosSelecionados();
-   botaoNoThis.querySelector("ion-icon").classList.remove("none");
+    botaoNoThis.classList.add("selecionado");
+    pratoPrincipal = botaoNoThis.querySelector('h2').innerHTML;
+    precoPratoPrincipal = Number(botaoNoThis.querySelector('h6').innerHTML.replace('R$', '').replace(',', '.'));
+
+    verificaQtdePratosSelecionados();
+    botaoNoThis.querySelector("ion-icon").classList.remove("none");
+
 };
 
-let bebida;
+let bebida = "";
+let precoBebida ="";
 
-function escolheBebida(botaoNoThis){
+function escolheBebida(botaoNoThis) {
     desmarcarBotaoAnterior('.bebida');
     botaoNoThis.classList.add("selecionado");
-    bebida=botaoNoThis.innerHTML;
+    bebida = botaoNoThis.querySelector('h2').innerHTML;
+    precoBebida  = Number(botaoNoThis.querySelector('h6').innerHTML.replace('R$', '').replace(',', '.'));
     verificaQtdePratosSelecionados();
     botaoNoThis.querySelector("ion-icon").classList.remove("none");
 
 };
 
-let sobremesa;
+let sobremesa = "";
+let precoSobremesa ="";
 
 
-function escolheSobremesa(botaoNoThis){
+function escolheSobremesa(botaoNoThis) {
     desmarcarBotaoAnterior('.sobremesa');
     botaoNoThis.classList.add("selecionado");
-    sobremesa=botaoNoThis.innerHTML;
+    sobremesa = botaoNoThis.querySelector('h2').innerHTML;
+    precoSobremesa = Number(botaoNoThis.querySelector('h6').innerHTML.replace('R$', '').replace(',', '.'));
     verificaQtdePratosSelecionados();
     botaoNoThis.querySelector("ion-icon").classList.remove("none");
+    
 };
 
 
-function verificaQtdePratosSelecionados(){
-    if(pratoPrincipal !== undefined && bebida !== undefined &&  sobremesa !== undefined){
+function verificaQtdePratosSelecionados() {
+    if (pratoPrincipal !== "" && bebida !== "" && sobremesa !== "") {
+        console.log(pratoPrincipal);
+        console.log(precoPratoPrincipal);
+        console.log(bebida);
+        console.log(precoBebida);
+        console.log(sobremesa);
+        console.log(precoSobremesa);
         const mudar = document.querySelector('.chamaPedido');
         mudar.classList.add('pedido');
-        const mudarTexto = document.querySelector('.chamaPedido');
-        mudarTexto.innerHTML=`Fechar Pedido`;
-        
+        mudar.innerHTML = `Fechar Pedido`;
+        mudar.removeAttribute('disabled');
+
+
     }
+
+}
+
+function irWhatsapp() {
+    const soma = (precoBebida+precoPratoPrincipal+precoSobremesa).toFixed(2).replace('.',',');
+    console.log(soma);
+
+    const link = "https://wa.me/5584998093600?text="
+    const mensagem = encodeURIComponent(`Olá, gostaria de fazer o pedido:
+- Prato: ${pratoPrincipal}
+- Bebida: ${bebida}
+- Sobremesa: ${sobremesa}
+Total: R$ ${soma}`);
+
+    document.querySelector('a').setAttribute('href', link + mensagem)
+
+
 
 }
