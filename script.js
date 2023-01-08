@@ -48,7 +48,7 @@ let bebida = "";
 let precoBebida ="";
 
 function escolheBebida(botaoNoThis) {
-    desmarcarBotaoAnteriorDois('.bebidaSelecionada');
+    desmarcarBotaoAnteriorDois('.pratoPrincipal');
     botaoNoThis.classList.add("selecionadoDois");
     bebida = botaoNoThis.querySelector('h2').innerHTML;
     precoBebida  = Number(botaoNoThis.querySelector('h6').innerHTML.replace('R$', '').replace(',', '.'));
@@ -62,7 +62,7 @@ let precoSobremesa ="";
 
 
 function escolheSobremesa(botaoNoThis) {
-    desmarcarBotaoAnteriorTres('.sobremesaSelecionada');
+    desmarcarBotaoAnteriorTres('.pratoPrincipal');
     botaoNoThis.classList.add("selecionadoTres");
     sobremesa = botaoNoThis.querySelector('h2').innerHTML;
     precoSobremesa = Number(botaoNoThis.querySelector('h6').innerHTML.replace('R$', '').replace(',', '.'));
