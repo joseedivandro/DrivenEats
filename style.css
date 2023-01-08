@@ -142,11 +142,11 @@ header h3 {
 }
 
 .selecionadoDois{
-    border: 5px solid #32B72F;
+    box-shadow: 0px 0px 0px 5px #32B72F inset;
 }
 
 .selecionadoTres{
-    border: 5px solid #32B72F;
+    box-shadow: 0px 0px 0px 5px #32B72F inset;
 }
 
 .prato {
