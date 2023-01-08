@@ -107,11 +107,13 @@ header h3 {
     min-width: 172px;
     box-sizing: border-box;
     border: 5px solid white;
+    position: relative;
 
 }
 
 .selecionado{
-    border: 5px solid green;
+    border: 5px solid #32B72F;
+    
 }
 
 .prato {
@@ -174,8 +176,8 @@ header h3 {
 
 
 .pedido{
-    text-align: center;
-    font-family: 'Roboto';
+text-align: center;
+font-family: 'Roboto';
 font-style: normal;
 font-weight: 400;
 font-size: 20px;
@@ -243,3 +245,17 @@ text-align: center;
 letter-spacing: 0.018em;
 }
 
+
+
+ ion-icon{
+    color: #32B72F;
+    position: absolute;
+    right: 12px;
+    bottom: 15px;
+    position: absolute;
+    
+}
+
+.none{
+    display: none;
+}

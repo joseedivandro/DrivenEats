@@ -1,13 +1,14 @@
 
 
 function desmarcarBotaoAnterior(seletor){
-    // pegar o botão que foi selecionado anteriormente
+   
     const botaoSelecionadoAnteriormente = document.querySelector(`${seletor} .selecionado`);
 
-    // anter de remover a classe selecionado, verificar se o elementonão é null
+   
     if (botaoSelecionadoAnteriormente !== null){
         // remover a classe selecionado desse botao
         botaoSelecionadoAnteriormente.classList.remove('selecionado');
+        botaoSelecionadoAnteriormente.querySelector("ion-icon").classList.add("none");
     }
 }
 
@@ -18,10 +19,12 @@ function escolhePrato(botaoNoThis){
     desmarcarBotaoAnterior('.pratoPrincipal');
 
    botaoNoThis.classList.add("selecionado");
+  
 
    pratoPrincipal = botaoNoThis.innerHTML;
 
    verificaQtdePratosSelecionados();
+   botaoNoThis.querySelector("ion-icon").classList.remove("none");
 };
 
 let bebida;
@@ -32,6 +35,7 @@ function escolheBebida(botaoNoThis){
     bebida=botaoNoThis.innerHTML;
 
     verificaQtdePratosSelecionados();
+    botaoNoThis.querySelector("ion-icon").classList.remove("none");
 
 };
 
@@ -43,6 +47,7 @@ function escolheSobremesa(botaoNoThis){
     botaoNoThis.classList.add("selecionado");
     sobremesa=botaoNoThis.innerHTML;
     verificaQtdePratosSelecionados();
+    botaoNoThis.querySelector("ion-icon").classList.remove("none");
 };
 function verificaQtdePratosSelecionados(){
     if(pratoPrincipal !== undefined && bebida !== undefined &&  sobremesa !== undefined){
