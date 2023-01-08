@@ -11,19 +11,19 @@ function desmarcarBotaoAnterior(seletor) {
 };
 
 function desmarcarBotaoAnteriorDois(seletor) {
-    const botaoSelecionadoAnteriormenteDois = document.querySelector(`${seletor} .selecionado`);
+    const botaoSelecionadoAnteriormenteDois = document.querySelector(`${seletor} .selecionadoDois`);
     if (botaoSelecionadoAnteriormenteDois !== null) {
         // remover a classe selecionado desse botao
-        botaoSelecionadoAnteriormenteDois.classList.remove('selecionado');
+        botaoSelecionadoAnteriormenteDois.classList.remove('selecionadoDois');
         botaoSelecionadoAnteriormenteDois.querySelector("ion-icon").classList.add("none");
     }
 };
 
 function desmarcarBotaoAnteriorTres(seletor) {
-    const botaoSelecionadoAnteriormenteTres = document.querySelector(`${seletor} .selecionado`);
+    const botaoSelecionadoAnteriormenteTres = document.querySelector(`${seletor} .selecionadoTres`);
     if (botaoSelecionadoAnteriormenteTres !== null) {
         // remover a classe selecionado desse botao
-        botaoSelecionadoAnteriormenteTres.classList.remove('selecionado');
+        botaoSelecionadoAnteriormenteTres.classList.remove('selecionadoTres');
         botaoSelecionadoAnteriormenteTres.querySelector("ion-icon").classList.add("none");
     }
 };
@@ -49,7 +49,7 @@ let precoBebida ="";
 
 function escolheBebida(botaoNoThis) {
     desmarcarBotaoAnteriorDois('.bebidaSelecionada');
-    botaoNoThis.classList.add("selecionado");
+    botaoNoThis.classList.add("selecionadoDois");
     bebida = botaoNoThis.querySelector('h2').innerHTML;
     precoBebida  = Number(botaoNoThis.querySelector('h6').innerHTML.replace('R$', '').replace(',', '.'));
     verificaQtdePratosSelecionados();
@@ -63,7 +63,7 @@ let precoSobremesa ="";
 
 function escolheSobremesa(botaoNoThis) {
     desmarcarBotaoAnteriorTres('.sobremesaSelecionada');
-    botaoNoThis.classList.add("selecionado");
+    botaoNoThis.classList.add("selecionadoTres");
     sobremesa = botaoNoThis.querySelector('h2').innerHTML;
     precoSobremesa = Number(botaoNoThis.querySelector('h6').innerHTML.replace('R$', '').replace(',', '.'));
     verificaQtdePratosSelecionados();

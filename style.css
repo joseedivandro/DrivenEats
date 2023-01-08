@@ -139,6 +139,14 @@ header h3 {
     border: 5px solid #32B72F;
 }
 
+.selecionadoDois{
+    border: 5px solid #32B72F;
+}
+
+.selecionadoTres{
+    border: 5px solid #32B72F;
+}
+
 .prato {
     
     width: 144px;
