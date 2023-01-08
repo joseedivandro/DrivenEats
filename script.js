@@ -22,7 +22,6 @@ function escolhePrato(botaoNoThis) {
     botaoNoThis.classList.add("selecionado");
     pratoPrincipal = botaoNoThis.querySelector('h2').innerHTML;
     precoPratoPrincipal = Number(botaoNoThis.querySelector('h6').innerHTML.replace('R$', '').replace(',', '.'));
-
     verificaQtdePratosSelecionados();
     botaoNoThis.querySelector("ion-icon").classList.remove("none");
 

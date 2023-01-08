@@ -110,6 +110,30 @@ header h3 {
     position: relative;
 
 }
+.centralizaBebida{
+    width: 172px;
+    background-color: white;
+    margin-left: 16px;
+    border-radius: 9px;
+    box-sizing: border-box;
+    min-width: 172px;
+    box-sizing: border-box;
+    border: 5px solid white;
+    position: relative;
+
+}
+.centralizaSobremesa{
+    width: 172px;
+    background-color: white;
+    margin-left: 16px;
+    border-radius: 9px;
+    box-sizing: border-box;
+    min-width: 172px;
+    box-sizing: border-box;
+    border: 5px solid white;
+    position: relative;
+
+}
 
 .selecionado{
     border: 5px solid #32B72F;
