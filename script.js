@@ -8,7 +8,25 @@ function desmarcarBotaoAnterior(seletor) {
         botaoSelecionadoAnteriormente.classList.remove('selecionado');
         botaoSelecionadoAnteriormente.querySelector("ion-icon").classList.add("none");
     }
-}
+};
+
+function desmarcarBotaoAnteriorDois(seletor) {
+    const botaoSelecionadoAnteriormenteDois = document.querySelector(`${seletor} .selecionado`);
+    if (botaoSelecionadoAnteriormenteDois !== null) {
+        // remover a classe selecionado desse botao
+        botaoSelecionadoAnteriormenteDois.classList.remove('selecionado');
+        botaoSelecionadoAnteriormenteDois.querySelector("ion-icon").classList.add("none");
+    }
+};
+
+function desmarcarBotaoAnteriorTres(seletor) {
+    const botaoSelecionadoAnteriormenteTres = document.querySelector(`${seletor} .selecionado`);
+    if (botaoSelecionadoAnteriormenteTres !== null) {
+        // remover a classe selecionado desse botao
+        botaoSelecionadoAnteriormenteTres.classList.remove('selecionado');
+        botaoSelecionadoAnteriormenteTres.querySelector("ion-icon").classList.add("none");
+    }
+};
 
 
 
@@ -30,7 +48,7 @@ let bebida = "";
 let precoBebida ="";
 
 function escolheBebida(botaoNoThis) {
-    desmarcarBotaoAnterior('.bebidaSelecionada');
+    desmarcarBotaoAnteriorDois('.bebidaSelecionada');
     botaoNoThis.classList.add("selecionado");
     bebida = botaoNoThis.querySelector('h2').innerHTML;
     precoBebida  = Number(botaoNoThis.querySelector('h6').innerHTML.replace('R$', '').replace(',', '.'));
@@ -44,7 +62,7 @@ let precoSobremesa ="";
 
 
 function escolheSobremesa(botaoNoThis) {
-    desmarcarBotaoAnterior('.sobremesaSelecionada');
+    desmarcarBotaoAnteriorTres('.sobremesaSelecionada');
     botaoNoThis.classList.add("selecionado");
     sobremesa = botaoNoThis.querySelector('h2').innerHTML;
     precoSobremesa = Number(botaoNoThis.querySelector('h6').innerHTML.replace('R$', '').replace(',', '.'));
