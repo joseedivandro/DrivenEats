@@ -138,6 +138,17 @@ header h3 {
 .selecionado{
     border: 5px solid #32B72F;
     
+}
+
+.selecionadoUm{
+    border: 5px solid #32B72F;
+    
+    
+}
+
+.selecionadoDois{
+    border: 5px solid #32B72F;
+    
     
 }
 
