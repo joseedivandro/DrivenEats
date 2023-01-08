@@ -7,7 +7,7 @@ function desmarcarBotaoAnterior(seletor) {
 
 
     if (botaoSelecionadoAnteriormente !== null) {
-        // remover a classe selecionado desse botao
+        
         botaoSelecionadoAnteriormente.classList.remove('selecionado');
         botaoSelecionadoAnteriormente.querySelector("ion-icon").classList.add("none");
     }
