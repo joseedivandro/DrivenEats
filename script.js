@@ -1,6 +1,3 @@
-
-
-
 function desmarcarBotaoAnterior(seletor) {
     const botaoSelecionadoAnteriormente = document.querySelector(`${seletor} .selecionado`);
     if (botaoSelecionadoAnteriormente !== null) {
@@ -48,7 +45,7 @@ let bebida = "";
 let precoBebida ="";
 
 function escolheBebida(botaoNoThis) {
-    desmarcarBotaoAnteriorDois('.pratoPrincipal');
+    desmarcarBotaoAnteriorDois('.bebida');
     botaoNoThis.classList.add("selecionadoDois");
     bebida = botaoNoThis.querySelector('h2').innerHTML;
     precoBebida  = Number(botaoNoThis.querySelector('h6').innerHTML.replace('R$', '').replace(',', '.'));
@@ -62,7 +59,7 @@ let precoSobremesa ="";
 
 
 function escolheSobremesa(botaoNoThis) {
-    desmarcarBotaoAnteriorTres('.pratoPrincipal');
+    desmarcarBotaoAnteriorTres('.sobremesa');
     botaoNoThis.classList.add("selecionadoTres");
     sobremesa = botaoNoThis.querySelector('h2').innerHTML;
     precoSobremesa = Number(botaoNoThis.querySelector('h6').innerHTML.replace('R$', '').replace(',', '.'));
