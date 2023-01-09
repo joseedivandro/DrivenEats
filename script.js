@@ -42,20 +42,20 @@ function escolhePrato(botaoNoThis) {
 };
 
 let bebida = "";
-let precoBebida ="";
+let precoBebida = "";
 
 function escolheBebida(botaoNoThis) {
     desmarcarBotaoAnteriorDois('.bebida');
     botaoNoThis.classList.add("selecionadoDois");
     bebida = botaoNoThis.querySelector('h2').innerHTML;
-    precoBebida  = Number(botaoNoThis.querySelector('h6').innerHTML.replace('R$', '').replace(',', '.'));
+    precoBebida = Number(botaoNoThis.querySelector('h6').innerHTML.replace('R$', '').replace(',', '.'));
     verificaQtdePratosSelecionados();
     botaoNoThis.querySelector("ion-icon").classList.remove("none");
 
 };
 
 let sobremesa = "";
-let precoSobremesa ="";
+let precoSobremesa = "";
 
 
 function escolheSobremesa(botaoNoThis) {
@@ -65,43 +65,38 @@ function escolheSobremesa(botaoNoThis) {
     precoSobremesa = Number(botaoNoThis.querySelector('h6').innerHTML.replace('R$', '').replace(',', '.'));
     verificaQtdePratosSelecionados();
     botaoNoThis.querySelector("ion-icon").classList.remove("none");
-    
+
 };
 
 
 function verificaQtdePratosSelecionados() {
-    if (pratoPrincipal !== ""){
-        if(bebida !== "" ){
-            if(sobremesa !== ""){
-                console.log(pratoPrincipal);
-                console.log(precoPratoPrincipal);
-                console.log(bebida);
-                console.log(precoBebida);
-                console.log(sobremesa);
-                console.log(precoSobremesa);
+    if (pratoPrincipal !== "") {
+        if (bebida !== "") {
+            if (sobremesa !== "") {
+
                 const mudar = document.querySelector('.chamaPedido');
                 mudar.classList.add('pedido');
                 mudar.innerHTML = `Fechar Pedido`;
                 mudar.removeAttribute('disabled');
-        
+
 
             }
         }
-        
-    }
-  
-     
-       
 
     }
+
+
+
+
+}
 
 
 
 function irWhatsapp() {
-    const soma = (precoBebida+precoPratoPrincipal+precoSobremesa).toFixed(2).replace('.',',');
+    const soma = (precoBebida + precoPratoPrincipal + precoSobremesa).toFixed(2).replace('.', ',');
     console.log(soma);
 
-    const link = "https://wa.me/5584998093600?text="
+    const link = "https://wa.me/55999999999?text="
     const mensagem = encodeURIComponent(`Olá, gostaria de fazer o pedido:
 - Prato: ${pratoPrincipal}
 - Bebida: ${bebida}

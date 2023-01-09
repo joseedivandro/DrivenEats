@@ -4,7 +4,7 @@
 header {
     background-color: #CF2B2B;
     height: 92px;
-    width: 414px;
+    width: 100%;
     position: fixed;
     z-index: 1;
 
@@ -13,7 +13,7 @@ header {
 
 
 main {
-    width: 414px;
+   
     
 
 
@@ -21,8 +21,7 @@ main {
 }
 
 body {
-    align-items: center;
-    justify-content: center;
+    
     display: flex;
     flex-direction: column;
     background-color: #E5E5E5;
@@ -51,8 +50,8 @@ header h3 {
 
 .container {
 
-    width: 414px;
-    margin: auto;
+    
+  
    
     position: relative;
     top: 100px;
@@ -74,7 +73,7 @@ header h3 {
     display: flex;
     overflow-x: scroll;
     align-items: center;
-    width: 414px;
+    
     min-width: 414px;
 }
 .bebidas {
@@ -82,7 +81,7 @@ header h3 {
     display: flex;
     overflow-x: scroll;
     align-items: center;
-    width: 414px;
+    
     min-width: 414px;
 }
 .sobremesas {
@@ -90,7 +89,7 @@ header h3 {
     display: flex;
     overflow-x: scroll;
     align-items: center;
-    width: 414px;
+    
     min-width: 414px;
     margin-bottom: 200px;
 }
@@ -227,7 +226,7 @@ background-color: #32B72F;
 footer {
     background-color: white;
     height: 92px;
-    width: 414px;
+    width: 100%;
     position: fixed;
     bottom: 0px;
     z-index: 1;
@@ -292,3 +291,8 @@ letter-spacing: 0.018em;
 .none{
     display: none;
 }
+
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+  }
