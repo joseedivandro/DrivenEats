@@ -70,22 +70,32 @@ function escolheSobremesa(botaoNoThis) {
 
 
 function verificaQtdePratosSelecionados() {
-    if (pratoPrincipal !== "" && bebida !== "" && sobremesa !== "") {
-        console.log(pratoPrincipal);
-        console.log(precoPratoPrincipal);
-        console.log(bebida);
-        console.log(precoBebida);
-        console.log(sobremesa);
-        console.log(precoSobremesa);
-        const mudar = document.querySelector('.chamaPedido');
-        mudar.classList.add('pedido');
-        mudar.innerHTML = `Fechar Pedido`;
-        mudar.removeAttribute('disabled');
+    if (pratoPrincipal !== ""){
+        if(bebida !== "" ){
+            if(sobremesa !== ""){
+                console.log(pratoPrincipal);
+                console.log(precoPratoPrincipal);
+                console.log(bebida);
+                console.log(precoBebida);
+                console.log(sobremesa);
+                console.log(precoSobremesa);
+                const mudar = document.querySelector('.chamaPedido');
+                mudar.classList.add('pedido');
+                mudar.innerHTML = `Fechar Pedido`;
+                mudar.removeAttribute('disabled');
+        
 
+            }
+        }
+        
+    }
+  
+     
+       
 
     }
 
-}
+
 
 function irWhatsapp() {
     const soma = (precoBebida+precoPratoPrincipal+precoSobremesa).toFixed(2).replace('.',',');
